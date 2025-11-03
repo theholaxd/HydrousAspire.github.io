@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      label{
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+
+    <title> FORM </title>
+
+  </head>
+<body>
+<fieldset
+style="background:lightgreen;
+width:445px;
+border-radius:58px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 10px">
+  <h1 align ="center">FORM</h1>
+</fieldset>
+  
+<form action="https://script.google.com/macros/s/AKfycbzyh9kmh9sWAUxSqD6RTiQB4ktS-sTCg73M0dedlxec9h7MnugmiP0N59GGsooJeQFFwQ/exec" method="POST" style ="margin-top:20px;">
+
+</legend>
+
+<fieldset>
+  <legend> Player Form Data</legend>
+<label for="Nama Lengkap"> <b> Player Name </b> </label>
+<input name ="Nama Lengkap"type="text" id="Nama Lengkap" size="20" placeholder="Input your name..." required  ><br>
+
+<label for="Status" style="margin-top: 10px"> <b> Status </b> </label>
+<select id="Status" name="Status" required>
+  <option disabled selected> Pick a status...</option>
+  <option value="Siswa"> Student </option>
+  <option value="Guru"> Teacher </option>
+  <option value="Pemain Internasional"> Foreigner </option>
+  <option value="Pemain Luar"> Others </option>
+</select>
+
+<label for="Roblox Username" style="margin-top: 10px"> <b> Roblox Username </b> </label>
+<input type="text"  name="Roblox Username" placeholder="Input your username..." required />
+</fieldset>
+<fieldset style="margin-top: 20px">
+
+  <legend> Review </legend>
+  <label for="Ratings"> Rating (1 - 5) </label>
+  <div style="display: flex">
+    <input type="range" id="Ratings" name="Ratings" min="1" max="5" value="3" required>
+    <span id="rangeValue" style="margin-left: 5px"> (3) </span>
+  </div>
+
+  <label for="Sugesti"> Suggestion/Opinion </label>
+  <input type="text" id="Sugesti" name="Sugesti" placeholder="Suggestions here..." required style="width: 50%">
+</fieldset>
+
+<button class ="tombol" type="submit" style="margin-top: 10px"> SUBMIT</button>
+<button class ="tombol" type="reset"> RESET</button>
+<p style="text-align: center;"><a href="index.html"><font face=" " size="100 ">  Menu </a></font>
+</fieldset>
+</form>
+
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    const mainSlider = document.getElementById("Ratings")
+    const sliderValue = document.getElementById("rangeValue")
+
+    sliderValue.textContent = "(" + mainSlider.value + ")"
+
+    mainSlider.oninput = function() {
+      sliderValue.textContent = "(" + mainSlider.value + ")"
+    }
+  })
+</script>
+</html>
